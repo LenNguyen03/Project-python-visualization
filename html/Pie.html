@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pie Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script src="../js/bootstrap.js"></script>
+    <style>
+        #b li a:hover {
+            font-size: 1.55em;
+            color: #5be948;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+    <style>
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#808080">
+                <div style="">
+                    <center>
+                        <h1>MATPLOTLIB</h1>
+                        <br />
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#d0d0d0">
+                <div style="">
+                    <center style="font-size:1.8em">
+
+                        <a href="../trangchu.html" style="margin-right: 2em">HOME PAGE</a>
+                        <a href="Data.html">ANALYSIS</a>
+                        <br />
+
+
+
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="rol-xs-2 col-sm-2 col-md-2 col-lg-2" style="background-color:#d6e8e7;height:1000px">
+                <div style="border:1px;font-size:1.8em;margin-top:5em;margin-left:2em">
+                    <a href="matplotlib.html">Matplotlib</a>
+                    <br />
+                    <br />
+                    <a href="line.html">Line</a>
+                    <br />
+                    <a href="Pie.html">Pie</a>
+                    <br />
+                    <a href="bar_chart.html">Bar Chart</a>
+                    <br />
+                    <a href="Scatter_Plot.html">Scatter Plot</a>
+                    <br />
+                    <a href="treemap.html">Tree Map</a>
+                    <br />
+                    <a href="Area.html">Area Chart</a>
+                    <br />
+                    <a href="histogram.html">Histogram</a>
+                    <br />
+                </div>
+
+
+            </div>
+            <div class="rol-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12">
+               
+                        <h1>Pie chart</h1>
+
+
+                        <h3>
+
+                            Biểu đồ hình tròn là một đồ họa thống kê hình tròn được chia thành các phần để minh họa tỷ lệ số. Trong biểu đồ hình tròn, độ dài cung của mỗi lát cắt (và do đó là góc và diện tích trung tâm của nó), tỷ lệ với số lượng mà nó biểu diễn.
+                        </h3>
+                        <hr />
+                        <h1>Khi nào sử dụng nó?</h1>
+
+                        <h3>
+                            -
+                            Hiển thị dữ liệu tỷ lệ phần trăm hoặc tỷ lệ.
+                            <br />
+
+                            -
+                            Ít hơn 7 loại.
+                            <br />
+
+                            -
+                            Hiển thị dữ liệu được phân loại thành danh mục danh nghĩa hoặc thứ tự.
+                            <br />
+
+                            -
+                            Cố gắng sử dụng các giá trị tích cực.
+                        </h3>
+                        <hr />
+                  
+                </div>
+
+                <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="height:auto;margin-top:3em">
+                    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#52ffe8">
+                <div style="">
+                    <center>
+
+                        <br />
+                        <br />
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+                    

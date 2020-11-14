@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>duong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Dinosaur', 'Length'],
+                ['Acrocanthosaurus (top-spined lizard)', 12.2],
+                ['Albertosaurus (Alberta lizard)', 9.1],
+                ['Allosaurus (other lizard)', 12.2],
+                ['Apatosaurus (deceptive lizard)', 22.9],
+                ['Archaeopteryx (ancient wing)', 0.9],
+                ['Argentinosaurus (Argentina lizard)', 36.6],
+                ['Baryonyx (heavy claws)', 9.1],
+                ['Brachiosaurus (arm lizard)', 30.5],
+                ['Ceratosaurus (horned lizard)', 6.1],
+                ['Coelophysis (hollow form)', 2.7],
+                ['Compsognathus (elegant jaw)', 0.9],
+                ['Deinonychus (terrible claw)', 2.7],
+                ['Diplodocus (double beam)', 27.1],
+                ['Dromicelomimus (emu mimic)', 3.4],
+                ['Gallimimus (fowl mimic)', 5.5],
+                ['Mamenchisaurus (Mamenchi lizard)', 21.0],
+                ['Megalosaurus (big lizard)', 7.9],
+                ['Microvenator (small hunter)', 1.2],
+                ['Ornithomimus (bird mimic)', 4.6],
+                ['Oviraptor (egg robber)', 1.5],
+                ['Plateosaurus (flat lizard)', 7.9],
+                ['Sauronithoides (narrow-clawed lizard)', 2.0],
+                ['Seismosaurus (tremor lizard)', 45.7],
+                ['Spinosaurus (spiny lizard)', 12.2],
+                ['Supersaurus (super lizard)', 30.5],
+                ['Tyrannosaurus (tyrant lizard)', 15.2],
+                ['Ultrasaurus (ultra lizard)', 30.5],
+                ['Velociraptor (swift robber)', 1.8]]);
+
+            var options = {
+                title: 'Lengths of dinosaurs, in meters',
+                legend: { position: 'none' },
+            };
+
+            var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+    <style>
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#808080">
+                <div style="">
+                    <center>
+                        <h1>MATPLOTLIB</h1>
+                        <br />
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#d0d0d0">
+                <div style="">
+                    <center style="font-size:1.8em">
+
+                        <a href="../trangchu.html" style="margin-right: 2em">HOME PAGE</a>
+                        <a href="Data.html">ANALYSIS</a>
+                        <br />
+
+
+
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="rol-xs-2 col-sm-2 col-md-2 col-lg-2" style="background-color:#d6e8e7;height:1000px">
+                <div style="border:1px;font-size:1.8em;margin-top:5em;margin-left:2em">
+                    <a href="matplotlib.html">Matplotlib</a>
+                    <br />
+                    <br />
+                    <a href="line.html">Line</a>
+                    <br />
+                    <a href="Pie.html">Pie</a>
+                    <br />
+                    <a href="bar_chart.html">Bar Chart</a>
+                    <br />
+                    <a href="Scatter_Plot.html">Scatter Plot</a>
+                    <br />
+                    <a href="treemap.html">Tree Map</a>
+                    <br />
+                    <a href="Area.html">Area Chart</a>
+                    <br />
+                    <a href="histogram.html">Histogram</a>
+                    <br />
+                </div>
+
+
+            </div>
+            <div class="rol-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  
+                        <h1>Histogram</h1>
+                        <h3>
+                            Biểu đồ là một đại diện chính xác của sự phân bố dữ liệu số. Nó khác với biểu đồ thanh, 
+                            theo nghĩa là biểu đồ thanh liên quan đến hai biến, nhưng biểu đồ chỉ liên quan đến một biến. 
+                            Để tạo biểu đồ, bước đầu tiên là "bin" (hoặc "nhóm") phạm vi giá trị - 
+                            nghĩa là, chia toàn bộ phạm vi giá trị thành một chuỗi các khoảng thời gian — 
+                            và sau đó đếm xem có bao nhiêu giá trị rơi vào mỗi khoảng thời gian. Các thùng 
+                            thường được chỉ định là các khoảng liên tiếp, không chồng chéo của một biến. Các thùng (khoảng) 
+                            phải liền nhau và thường (nhưng không bắt buộc) có kích thước bằng nhau.
+                        </h3>
+                        <hr />
+                        <h1>Khi nào sử dụng nó?</h1>
+                        <h3>
+                            Ước lượng phân phối xác suất của một biến liên tục (biến định lượng).
+                            Tổ chức lượng lớn dữ liệu và sản xuất
+                            hình ảnh hóa nhanh chóng, sử dụng một thứ nguyên duy nhất.
+                        </h3>
+                         <hr />
+                  
+                </div>
+
+                <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="height:auto;margin-top:3em">
+                    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+                </div>
+
+
+            </div>
+            <!--<div class="rol-xs-10 col-sm-10 col-md-10 col-lg-10">
+
+            <center>
+
+                <h1>HISTOGRAM CHART</h1>
+                <a href="../trangchu.html">Trang Chủ</a>
+                <br />
+                <div id="chart_div" style="width: 900px; height: 500px;"></div>
+                <br />
+
+                <br />
+                Histogram<hr />
+                A histogram is an accurate representation of the distribution of numerical data. It differs from a bar graph, in the sense that a bar graph relates two variables, but a histogram relates only one. To construct a histogram, the first step is to “bin” (or “bucket”) the range of values-that is, divide the entire range of values into a series of intervals—and then count how many values fall into each interval. The bins are usually specified as consecutive, non-overlapping intervals of a variable. The bins (intervals) must be adjacent, and are often (but are not required to be) of equal size.
+                <hr />
+                When to use it ?<hr />
+                Estimating the probability distribution of a continuous variable (quantitative variable).
+                Organizing large amounts of data, and producing a visualization quickly, using a single dimension.
+
+            </center>
+
+        </div>-->
+        </div>
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#52ffe8">
+                <div style="">
+                    <center>
+
+                        <br />
+                        <br />
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>

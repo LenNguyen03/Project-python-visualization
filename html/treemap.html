@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>duong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script src="../js/bootstrap.js"></script>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['treemap'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
+                ['Global', null, 0, 0],
+                ['America', 'Global', 0, 0],
+                ['Europe', 'Global', 0, 0],
+                ['Asia', 'Global', 0, 0],
+                ['Australia', 'Global', 0, 0],
+                ['Africa', 'Global', 0, 0],
+                ['Brazil', 'America', 11, 10],
+                ['USA', 'America', 52, 31],
+                ['Mexico', 'America', 24, 12],
+                ['Canada', 'America', 16, -23],
+                ['France', 'Europe', 42, -11],
+                ['Germany', 'Europe', 31, -2],
+                ['Sweden', 'Europe', 22, -13],
+                ['Italy', 'Europe', 17, 4],
+                ['UK', 'Europe', 21, -5],
+                ['China', 'Asia', 36, 4],
+                ['Japan', 'Asia', 20, -12],
+                ['India', 'Asia', 40, 63],
+                ['Laos', 'Asia', 4, 34],
+                ['Mongolia', 'Asia', 1, -5],
+                ['Israel', 'Asia', 12, 24],
+                ['Iran', 'Asia', 18, 13],
+                ['Pakistan', 'Asia', 11, -52],
+                ['Egypt', 'Africa', 21, 0],
+                ['S. Africa', 'Africa', 30, 43],
+                ['Sudan', 'Africa', 12, 2],
+                ['Congo', 'Africa', 10, 12],
+                ['Zaire', 'Africa', 8, 10]
+            ]);
+
+            tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
+
+            tree.draw(data, {
+                minColor: '#f00',
+                midColor: '#ddd',
+                maxColor: '#0d0',
+                headerHeight: 15,
+                fontColor: 'black',
+                showScale: true
+            });
+
+        }
+    </script>
+    <style>
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#808080">
+                <div style="">
+                    <center>
+                        <h1>MATPLOTLIB</h1>
+                        <br />
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#d0d0d0">
+                <div style="">
+                    <center style="font-size:1.8em">
+
+                        <a href="../trangchu.html" style="margin-right: 2em">HOME PAGE</a>
+                        <a href="Data.html">ANALYSIS</a>
+                        <br />
+
+
+
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="rol-xs-2 col-sm-2 col-md-2 col-lg-2" style="background-color:#d6e8e7;height:1000px">
+                <div style="border:1px;font-size:1.8em;margin-top:5em;margin-left:2em">
+                    <a href="matplotlib.html">Matplotlib</a>
+                    <br />
+                    <br />
+                    <a href="line.html">Line</a>
+                    <br />
+                    <a href="Pie.html">Pie</a>
+                    <br />
+                    <a href="bar_chart.html">Bar Chart</a>
+                    <br />
+                    <a href="Scatter_Plot.html">Scatter Plot</a>
+                    <br />
+                    <a href="treemap.html">Tree Map</a>
+                    <br />
+                    <a href="Area.html">Area Chart</a>
+                    <br />
+                    <a href="histogram.html">Histogram</a>
+                    <br />
+                </div>
+
+
+            </div>
+            <div class="rol-xs-10 col-sm-10 col-md-10 col-lg-10">
+                <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12">
+         
+                        <h1> TREE MAP</h1><hr />
+
+                                          <h3>
+
+                                              Biểu đồ dạng cây hiển thị dữ liệu phân cấp (cấu trúc dạng cây) dưới dạng một tập hợp các hình chữ nhật lồng nhau.
+                                              Mỗi nhánh của cây có một hình chữ nhật, sau đó được lát bằng
+                                              hình chữ nhật đại diện cho các nhánh con. Hình chữ nhật của nút lá có diện tích
+                                              tỷ lệ với một thứ nguyên được chỉ định của dữ liệu. Thường thì các nút lá là
+                                              được tô màu để hiển thị một thứ nguyên riêng của dữ liệu.
+
+                                          </h3>
+
+                     
+                        <hr />
+                        <h1>Khi nào sử dụng nó?</h1>
+                        <h3>
+
+                            - Dưới 10 chi nhánh
+                            <br />
+                            -
+                            Giá trị tích cực
+                            <br />
+                            -
+                            Không gian cho hình dung bị hạn chế.
+                        </h3>
+                        <hr />
+                 
+                </div>
+
+                <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="height:auto;margin-top:3em">
+                    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+
+
+            <div class="rol-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#52ffe8">
+                <div style="">
+                    <center>
+
+                        <br />
+                        <br />
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
